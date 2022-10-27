@@ -3,11 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Auth extends CI_Controller
 {
-    public function __constructor()
-    {
-        parent::__construct();
-        $this->load->library('form_validation');
-    }
 
     public function index()
     {
@@ -19,8 +14,6 @@ class Auth extends CI_Controller
         $password = $this->input->post('password');
 
         $user = $this->db->get_where('users', ['username' => $username])->row_array();
-        var_dump($user);
-        die;
 
         // cek data user
         if ($username == $user['username']) {
