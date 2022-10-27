@@ -4,6 +4,9 @@ showTab(currentTab); // Display the current tab
 var wishlist = [];
 function buy(data){
   data = data.split(',');
+  // data.push(data[3])
+  // data.push(1)
+  console.log(data)
   if(wishlist.length == 0){
     wishlist.push(data);
 
@@ -81,21 +84,25 @@ async function transaction(){
     total :document.getElementById('total-harga').innerHTML,
     data : wishlist
   }
+  let dataToPush = []
+  for (let index = 0; index < wishlist.length; index++) {
+    const element = wishlist[index].toString().replaceAll(',','|');
+    dataToPush.push(element);
+  }
 
+  console.log(dataToPush)
+ 
   let formData = new FormData();
   formData.append('total',data.total)
-  formData.append('data',wishlist)
+  formData.append('data',dataToPush)
 
-  console.log('transaction',data)
   let postData= await fetch(base_url, {
     method: 'POST',
     mode:'no-cors',
     headers:{
       'Content-Type': 'application/json'
     },
-    body:JSON.stringify({
-      test : 'test'
-    })
+    body:formData
   })
 
   let response=await postData.json()

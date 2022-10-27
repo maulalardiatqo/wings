@@ -42,7 +42,7 @@
         <div class="container d-flex justify-content-center flex-column">
             <h1>Pesanan Anda Telah Di Proses</h1>
             <a href="<?= base_url('market') ?>" type="button">Kembali Berbelanja</a>
-            <div id="base_url">
+            <div id="base_url" style="display: none;">
                 <?= base_url('market/transaction') ?>
             </div>
         </div>
