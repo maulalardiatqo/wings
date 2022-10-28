@@ -8,11 +8,13 @@
                 <th>Date</th>
                 <th>Item</th>
             </tr>
-            <tr>
-                <?php foreach ($transaction_detail as $p) : ?>
-                    <td></td>
-                <?php endforeach ?>
-            </tr>
+
+            <?php foreach ($transaction_detail as $p) : ?>
+                <tr>
+                    <td><?= $p['document_code'] . ' ' . $p['document_number'] ?></td>
+                </tr>
+            <?php endforeach ?>
+
         </table>
     </div>
 </form>
