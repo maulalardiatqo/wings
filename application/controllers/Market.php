@@ -12,6 +12,14 @@ class Market extends CI_Controller
         $this->load->view('market/index', $data);
         $this->load->view('template/footer');
     }
+    public function detail($id)
+    {
+        $data['product'] = $this->db->get_where('product', ['id' => $id])->result_array();
+
+        $this->load->view('template/header');
+        $this->load->view('market/detail', $data);
+        $this->load->view('template/footer');
+    }
     public function transaction()
     {
         $number = 001;

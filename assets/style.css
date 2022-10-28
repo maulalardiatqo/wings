@@ -65,7 +65,17 @@
     display: inline-block;
     z-index: 99;
   }
-  
+  .tombol {
+    font: bold 11px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+  }
   .line{
     background-color: #bbbbbb;
     position: absolute;
@@ -89,8 +99,14 @@
   .justify-content-center{
     justify-content: center;
   }
+  .justify-content-start{
+    justify-content: flex-start;
+  }
   .justify-content-end{
     justify-content: end;
+  }
+  .justify-content-around{
+    justify-content: space-around;
   }
   .align-item-center{
     align-items: center;

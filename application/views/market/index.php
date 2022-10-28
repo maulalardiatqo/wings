@@ -19,7 +19,7 @@
 
                         </div>
                         <div class="wrap-content">
-                            <h5><a href=""></a><?= $p['product_name'] ?></h5>
+                            <h5><a href="<?= base_url('market/detail/') . $p['id'] ?>"><?= $p['product_name'] ?></a></h5>
                             <h4><s>Rp.<?= $p['price'] ?></s> </h4>
                             <h3>Rp.<?= str_replace(',', '.', number_format($harga))  ?></h3>
                         </div>
