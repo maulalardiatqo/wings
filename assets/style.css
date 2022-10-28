@@ -76,6 +76,14 @@
     border-bottom: 1px solid #333333;
     border-left: 1px solid #CCCCCC;
   }
+  table, td, th {
+    border: 1px solid;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
   .line{
     background-color: #bbbbbb;
     position: absolute;
